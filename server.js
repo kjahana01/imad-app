@@ -23,16 +23,15 @@ function createTemplate (data) {
     var heading = data.heading;
     var content = data.content;
 
-    var htmlTemplate = `
+    var htmlTemplate = 
     <html>
-          <head>
-              <Title>
+        <head>
+              <title>
                  ${title}
               </title>
               <meta name="vewport" content="width=device-width,initial-scale=1"/>
               <link href="/ui/style.css" rel="stylesheet" />
-              
-        </head>
+       </head>
         <body>
             <div class="container">
             <div> 
