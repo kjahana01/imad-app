@@ -9,21 +9,17 @@ var artickleOne = {
   title : 'Article one  I m kushal',
  heading: 'Artcle one',
  date: 'Aug 4th 2017',
- content: `
-         <p>
-                   This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                   </p>
-                   <p>
-                   This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                   </p>
-                   <p>
+ content : `This is the content for my first article. This is the content for my first article' 
+               
+`};
+
 function createTemplate (data) {
     var title = data.title;
     var date = date.date;
     var heading = data.heading;
     var content = data.content;
 
-    var htmlTemplate = 
+    var htmlTemplate = `
     <html>
         <head>
               <title>
@@ -50,9 +46,9 @@ function createTemplate (data) {
                 </div>
         </body>
     </html>
-   ;
+  `;
    return createTemplate;
-}
+}``;
 
 
 app.get('/', function (req, res) {
