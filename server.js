@@ -30,12 +30,12 @@ function createTemplate (data) {
     var heading = data.heading;
     var content = data.content;
     
-    var htmlTemplate = `
-   <html>
+   var htmlTemplate = '
+ <html>
       <head>
-          <title>
-               ${title}
-           </title>
+          <Title>
+              ${title}
+          </Title>
           <meta name="vewport" content="width=device-width,initial-scale=1"/>
           <link href="/ui/style.css" rel="stylesheet" />
           
@@ -46,20 +46,20 @@ function createTemplate (data) {
            <a href="/">Home</a>
          </div>
     <br/>
-        <h3>
-          ${heading}
-        </h3>
+       <h3>
+        ${heading}
+       </h3>
         <div>
-           ${date}
+          ${date}
+         </div>
+            <div>
+              ${content}
             </div>
-         <div>
-           ${content}
-          </div>
-      </div>
+            </div>
     </body>
 </html>
-    ` ;
-    return htmlTemplate;
+';
+      return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
