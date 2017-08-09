@@ -30,14 +30,13 @@ var articles = {
 },
     
     'article-three': {
-    title: 'Article third i Kushal',
-    heading: 'Articletwo',
+     title: 'Article third i Kushal',
+     heading: 'Articletwo',
      date: '5th augest 2017'
-  
-    content:`
-    <p>
-       this is third article
-    </p>
+     content:`
+              <p>
+                  This is third article
+               </p>
   } ;
 
 function createTemplate (data) {
