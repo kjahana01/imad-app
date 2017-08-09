@@ -31,7 +31,7 @@ function createTemplate (data) {
    <html>
       <head>
           <Title>
-           ${title}
+            ${title}
           </Title>
           <meta name="vewport" content="width=device-width,initial-scale=1"/>
           <link href="/ui/style.css" rel="stylesheet" />
