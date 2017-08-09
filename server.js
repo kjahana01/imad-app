@@ -22,28 +22,22 @@ var articles = {
                    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
                    </p> 
 },
-    
-    'article-two': {
+  'article-two': {
     title: 'Article two i Kushal',
-    heading: 'Article two',
+    heading: 'Articletwo',
     date: '6th augest 2017',
     content: `
-                
-                   <p>
-                   This is the content for my second article. 
-                   </p> `
-             
 },
-    '' article-three': {
-    title: 'Article three i Kushal',
-    heading: 'Article third',
-    date: 9th augest 2017',
-    content: `
-                 
-                   <p>
-                   This is the content for my third article. 
-                   </p> `
-},
+    
+    'article-three': {
+    title: 'Article third i Kushal',
+    heading: 'Articletwo',
+     date: '5th augest 2017'
+  
+    content:`
+    <p>
+       this is third article
+    </p>
   } ;
 
 function createTemplate (data) {
@@ -57,7 +51,7 @@ function createTemplate (data) {
       <head>
           <title>
                ${title}
-          </title>
+           </title>
           <meta name="vewport" content="width=device-width,initial-scale=1"/>
           <link href="/ui/style.css" rel="stylesheet" />
           
