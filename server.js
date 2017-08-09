@@ -21,23 +21,8 @@ var articles = {
                    <p>
                    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
                    </p> 
-},
-  'article-two': {
-    title: 'Article two i Kushal',
-    heading: 'Articletwo',
-    date: '6th augest 2017',
-    content: `
-},
-    
-    'article-three': {
-     title: 'Article third i Kushal',
-     heading: 'Articletwo',
-     date: '5th augest 2017'
-     content:`
-              <p>
-                  This is third article
-               </p>
-  } ;
+};
+  
 
 function createTemplate (data) {
     var title = data.title;
