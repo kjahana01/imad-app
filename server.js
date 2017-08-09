@@ -21,11 +21,12 @@ var articleOne= {
                    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
                    </p> `
 };
-function createTemplatee  (data) {
+function createTemplatee (data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = datacontent;
+    
     var htmlTemplate = `
    <html>
       <head>
@@ -56,7 +57,7 @@ function createTemplatee  (data) {
 </html>
     ` ;
     return htmlTemplate;
- }
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
