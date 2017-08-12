@@ -50,6 +50,11 @@ function createTemplate (data) {
    return createTemplate;
 }``;
 
+app.get('/favicon.ico', function (req, res) {
+
+  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
+
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
