@@ -9,7 +9,7 @@ var artickleOne = {
   title : 'Article one  I m kushal',
  heading: 'Artcle one',
  date: 'Aug 4th 2017',
- content : `This is the content for my first article. This is the content for my first article' 
+ content : `This is the content for my first article. This is the content for my first article.
                
 `};
 
@@ -25,7 +25,7 @@ function createTemplate (data) {
               <title>
                  ${title}
               </title>
-              <meta name="vewport" content="width=device-width,initial-scale=1"/>
+              <meta name='vewport' content="width=device-width,initial-scale=1"/>
               <link href="/ui/style.css" rel="stylesheet" />
        </head>
         <body>
