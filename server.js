@@ -25,11 +25,11 @@ function createTemplate (data) {
               <title>
                  ${title}
               </title>
-              <meta name='vewport' content="width=device-width,initial-scale=1"/>
-              <link href="/ui/style.css" rel="stylesheet" />
+              <meta name='vewport' content='width=device-width,initial-scale=1'/>
+              <link href='/ui/style.css' rel='stylesheet' />
        </head>
         <body>
-            <div class="container">
+            <div class='container'>
             <div> 
                <a href="/">Home</a>
              </div>
@@ -64,7 +64,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 var port = 8080; // ue 080  for local developement because you might already have apache runnig on 80
-app.listen(8080, function (){
+app.listen(8080, function () {
     console.log('IMAD course app listening on port ${port}!');
 });
 
