@@ -2,7 +2,7 @@
 var button = document.getElementById('counter');
 var counter = 0;
 
-buttomn.onclick = function () {
+button.onclick = function () {
     
     // Make a request to a counter endpoint
     
