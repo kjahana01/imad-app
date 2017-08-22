@@ -25,9 +25,10 @@ button.onclick = function () {
 };
 
 // Student name
-
-var submit = document.getElementById('submit_btn');
-submit.onclick = function () {
+        var nameInput = document.getElementById('name');
+         var name = nameInput.value;
+        var submit = document.getElementById('submit_btn');
+        submit.onclick = function () {
     
      //  Create a request
     var request = new XMLHttpRequest();
@@ -53,8 +54,7 @@ submit.onclick = function () {
     };
    
     // Make The request
-    var nameInput = document.getElementById('name');
-    var name = nameInput.value;
+    
     request.open('GET', 'http://kushaljoharapurkar.imad.hasura-app.io/submit-naame?name=' + name, true);
     request.send(null);
   // Make a request to the server and send the name.
