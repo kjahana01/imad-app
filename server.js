@@ -1,7 +1,11 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').pool;
 
+var config = {
+    user
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -60,6 +64,11 @@ app.get('/ui/madi.png', function (req, res) {
 
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 
+});
+
+app.get('/text-db', function (req, res)  {
+    // make a select request
+    // return a response with the results
 });
 
 
