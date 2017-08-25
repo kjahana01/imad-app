@@ -69,7 +69,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 
 });
-var pool = new Pool(config);
+var Pool = new Pool(config);
 app.get('/test-db', function (req, res)  {
     // make a select request
     // return a response with the results
@@ -119,8 +119,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-var port = 3240; // ue 080  for local developement because you might already have apache runnig on 80
-app.listen(3240, function () {
+var port = 8080; // ue 080  for local developement because you might already have apache runnig on 80
+app.listen(8080, function () {
    console.log('IMAD course app listening on port ${port}!');
 });
 
