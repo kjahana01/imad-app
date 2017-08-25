@@ -120,7 +120,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 var port = 80; // ue 080  for local developement because you might already have apache runnig on 80
-app.listen(80, function () {
+app.listen(port, function () {
    console.log('IMAD course app listening on port ${port}!');
 });
 
