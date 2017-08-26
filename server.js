@@ -21,9 +21,9 @@ var articleOne = {
  content : `This is the content for my first article. This is the content for my first article.
                
 `};
-var articleTne = {
+var articleTwo = {
   title : 'Article two  I m kushal',
- heading: 'Artcle one',
+ heading: 'Artcle two',
  date: 'Aug 8th 2017',
  content : `This is the content for my secondt article. This is the content for my second article.
                
@@ -120,6 +120,10 @@ app.get('/submit-name', function(req, res) { // /submit-name?name-xxx
  
  app.get('/:articleName', function (req, res) {
      res.send(createTemplate(articleOne));
+ });
+ 
+ app.get('/:articleName', function (req, res) {
+     res.send(createTemplate(articleTwo));
  });
  
 
