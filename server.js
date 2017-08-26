@@ -21,6 +21,13 @@ var articleOne = {
  content : `This is the content for my first article. This is the content for my first article.
                
 `};
+var articleTne = {
+  title : 'Article two  I m kushal',
+ heading: 'Artcle one',
+ date: 'Aug 8th 2017',
+ content : `This is the content for my secondt article. This is the content for my second article.
+               
+`};
 
 function createTemplate (data) {
     var title = data.title;
