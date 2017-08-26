@@ -78,7 +78,7 @@ app.get('/test-db', function (req, res)  {
         if (err) {
             res.status(500).send(err, toString);
         } else {
-            res.send(JSON.stringify(result.rows));
+            res.send(JSON.stringify(result));
         }
     });
 });
@@ -121,7 +121,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 var port = 80;
-app.listen(port, function () {
+app.listen(80, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
 
