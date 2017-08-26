@@ -120,8 +120,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-//var port = 80;
-//app.listen(80, function () {
- // console.log(`IMAD course app listening on port ${port}!`);
-//});
+var port = 80;
+app.listen(80, function () {
+  console.log(`IMAD course app listening on port ${port}!`);
+});
 
