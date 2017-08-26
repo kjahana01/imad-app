@@ -14,21 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-  title : 'Article one  I m kushal',
- heading: 'Artcle one',
- date: 'Aug 4th 2017',
- content : `This is the content for my first article. This is the content for my first article.
-               
-`};
-var articleTwo = {
-  title : 'Article two  I m kushal',
- heading: 'Artcle Two',
- date: 'Aug 8th 2017',
- content : `This is the content for  second article. This is the content for  second article.
-               
-`};
-
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
