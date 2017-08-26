@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var pool = Pool(config);
+
 
 var config = {
     user: 'kushaljoharapurkar',
@@ -121,7 +121,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 var port = 80;
-app.listen(80, function () {
+app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
 
