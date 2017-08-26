@@ -112,7 +112,7 @@ app.get('/submit-name', function(req, res) { // /submit-name?name-xxx
 });
  
  app.get('/:articleName', function (req, res) {
-     res.send(createTemplate(articleOne));
+     res.send(createTemplate(article-one));
  });
  
 
