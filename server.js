@@ -23,9 +23,9 @@ var articleOne = {
 `};
 var articleTwo = {
   title : 'Article two  I m kushal',
- heading: 'Artcle two',
+ heading: 'Artcle Two',
  date: 'Aug 8th 2017',
- content : `This is the content for my second article. This is the content for my second article.
+ content : `This is the content for  second article. This is the content for  second article.
                
 `};
 
