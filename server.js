@@ -14,7 +14,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var artickleOne = {
+var articleOne = {
   title : 'Article one  I m kushal',
  heading: 'Artcle one',
  date: 'Aug 4th 2017',
@@ -112,7 +112,7 @@ app.get('/submit-name', function(req, res) { // /submit-name?name-xxx
 });
  
  app.get('/:articleName', function (req, res) {
-     res.send(createTemplate(article-one));
+     res.send(createTemplate(articleOne));
  });
  
 
