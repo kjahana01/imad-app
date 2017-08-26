@@ -64,14 +64,14 @@ app.get('/ui/madi.png', function (req, res) {
 
 });
 
-function hash(input, salt) {
+function hash (input, salt) {
     //How do we create a hash
-    var hashed = crypto.pbkdf2('input', 'salt', 10000, 512, 'sha512' );
+    var hashed = crypto.pbkdf25ync(input, salt, 10000, 512, 'sha512' );
     return hashed.toString('hex');
 }
 
-app.get('/hash/; input',function(){
-   var hashedString = hash(req.paramss.input, 'this is some random string');
+app.get('/hash/:input',function(req, res){
+   var hashedString = hash(req.params.input, 'this-is-some-random-string');
    res.send(hashedString);
 });
 
