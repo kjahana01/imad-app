@@ -135,9 +135,7 @@ app.get('/submit-name', function(req, res) { // /submit-name?name-xxx
     });    
  });
  
- app.get('/:articleName', function (req, res) {
-     res.send(createTemplate(articleTwo));
- });
+
  
 
 app.get('/ui/style.css', function (req, res) {
