@@ -103,8 +103,6 @@ app.post('/login', function(){
                if(err) {
             res.status(500).send(err.toString());
         } else {
-            if (result.rows.length === 0) 
-            
             res.send(JSON.stringify(result.rows));
         }
    });
