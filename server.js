@@ -79,7 +79,7 @@ app.get('/hash/:input',function(req, res){
 
 app.post('/create-user1', function (){
    //username, password
-   //"username": "kushal", password": "password""
+   //"username": "kushal", "password": "password""
    //JSON
    var usernname = req.body.username;
    var password = req.body.password;
@@ -90,6 +90,21 @@ app.post('/create-user1', function (){
                if(err) {
             res.status(500).send(err.toString());
         } else {
+            res.send(JSON.stringify(result.rows));
+        }
+   });
+});
+
+app.post('/login', function(){
+     var usernname = req.body.username;
+   var password = req.body.password;
+   
+   pool.query('SELECT * FROM "user1" username = $1',[username] ,function (err, result) {
+               if(err) {
+            res.status(500).send(err.toString());
+        } else {
+            if (result.rows.length === 0) 
+            
             res.send(JSON.stringify(result.rows));
         }
    });
