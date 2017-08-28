@@ -87,7 +87,7 @@ app.get('/hash/:input', function(req, res){
 
 app.post('/create-user', function(req, res) {
    // username , password
-   // ["username": "kvjl" , "password": "pass"]
+   // ["username": "KUSHAL" , "password": "password"]
    // JSON
    var username = req.body.username;
    var password = req.body.password;
@@ -108,12 +108,12 @@ app.post('/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
  
-   pool.query('SELECT * FROM "user" username =  $1)', [username], function (err, result) {
+   pool.query('SELECT * FROM "user" WHERE  username =  $1)', [username], function (err, result) {
          if(err) {
             res.status(500).send(err.toString());
         } else {
             if (result.rows.length ===0) {
-            res.send(403).send('username/password not valid');
+            res.status(403).send('username/password not valid');
             } else {
                 // Match the password
                 var dbString = result.rows[0].password;
