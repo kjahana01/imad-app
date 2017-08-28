@@ -67,7 +67,12 @@ app.get('/ui/madi.png', function (req, res) {
 function hash (input, salt) {
    //How do we create a hash
    var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-   return hashed.toString('hex');
+   return ['pbkdf2', "10000", salt, hashed.toString('hex')].join('$');
+   
+   // algorithm md5
+   // "password" => ponugtrdefvbhnjnbytrrswachvjmjp
+   // "password-this-is-some-random-string" => abqdjevfyrbifbsoyrisbuirsrv rsb
+   // "password"=> "password-this-is-a-salt" => hash => hash * 10x times
 }
 
 app.get('/hash/:input', function(req, res){
