@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var pool = new Pool(config);
+var crypto = require('crypto');
 
 var config = {
     user: 'kushaljoharapurkar',
@@ -62,6 +63,20 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 
 });
+
+function hash (input, salt) {
+   //How do we create a hash
+   var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+   returrn.hashed.toString('hex');
+}
+
+app.get('/hash/:input', function(req, res){
+   var hashedString = hash(req.params.input,'this-is-some-random-string');
+   res.send(hashedString);
+    
+});
+
+
 
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
