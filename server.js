@@ -150,6 +150,11 @@ app.get('/check-login', function(req, res) {
    }
 });
 
+app.get('/logout', function (req, res) {
+   delete req.session.auth;
+   res.send('Logged out');
+});
+
 app.get('/test-db', function (req, res) {
     //make a select request
     //return a response with the results
